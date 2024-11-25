@@ -79,6 +79,9 @@ BOARD_LIBACRYL_DEFAULT_SCALER := mscl_9810
 BOARD_LIBACRYL_DEFAULT_BLTER := fimg2d_9810_blter
 
 ifneq ($(BOARD_VENDOR), samsung)
+
+$(call soong_config_set,libhwjpeg,HWJPEG_ANDROID_VERSION,10)
+
 BOARD_USES_MOBICORE_TEE := true
 
 # MobiCore namespace
